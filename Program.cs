@@ -9,7 +9,6 @@ namespace Scraper
     {
         /*  Rating normalization - ratings are currently on a 0-10 scale,
             Values <= 5 are kept as is, values > 5 are halved. */
-
         static double NormalizeRating(double raw) =>
             raw > 5.0 ? Math.Round(raw / 2.0, 2) : raw;
 
@@ -87,9 +86,8 @@ namespace Scraper
                                     style=""color:#CC0000;"">USK11ANZ</span></a></p>
                         <div class=""item-asset""><!--.--></div>
                     </div>
-                </div>
-              
-                              ";
+                </div>";
+
             List<Product> products = new List<Product>();
             
             HtmlDocument doc = new HtmlDocument();
